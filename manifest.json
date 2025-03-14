@@ -1,25 +1,24 @@
 {
     "manifest_version": 3,
-    "name": "3x Video Speed",
+    "name": "3x Video Speed Controller",
     "version": "1.0",
-    "description": "Play videos at 3x speed on any website.",
+    "description": "Control video playback speed (2.5x, 3x, 4x) with a reset option.",
     "icons": {
-      "48": "icon.png"
+        "48": "icon.png"
     },
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["storage", "activeTab", "scripting"],
     "host_permissions": ["<all_urls>"],
     "background": {
-      "service_worker": "background.js"
+        "service_worker": "background.js"
     },
     "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
     ],
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon.png"
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
     }
-  }
-  
+}

@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3x Video Speed</title>
-    <script src="popup.js"></script>
+    <style>
+        body {
+            width: 200px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            width: 90%;
+            margin: 5px 0;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .active {
+            background-color: #28a745 !important;
+        }
+    </style>
 </head>
 <body>
-    <button id="speedButton">Set Video Speed to 3x</button>
+    <h3>Speed Control</h3>
+    <button id="speed2.5">2.5x Speed</button>
+    <button id="speed3">3x Speed</button>
+    <button id="speed4">4x Speed</button>
+    <button id="stopSpeed">Reset (1x)</button>
+    <script src="popup.js"></script>
 </body>
 </html>

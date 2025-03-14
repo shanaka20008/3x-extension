@@ -5,10 +5,17 @@ function setVideoSpeed() {
     });
   }
   
-  // Run immediately when the script loads
+  // Run immediately
   setVideoSpeed();
   
-  // Re-run when new videos are added to the page (for sites with dynamically loaded content)
+  // Observe changes in the DOM to detect new videos
   const observer = new MutationObserver(setVideoSpeed);
   observer.observe(document.body, { childList: true, subtree: true });
+  
+  // Also, reapply speed when the page is loaded
+  document.addEventListener("readystatechange", () => {
+    if (document.readyState === "complete") {
+      setVideoSpeed();
+    }
+  });
   
